@@ -1,0 +1,77 @@
+# Design Patterns
+
+A hands-on course in two tracks. Track one covers the 23 Gang of Four patterns; track two covers the
+architectures those objects live in: monoliths, modular monoliths, layered and hexagonal designs,
+microservices, and event-driven systems. Every pattern comes as a class diagram, a short Python
+implementation, a sequence diagram traced from the real method calls, and a lab you drive yourself.
+
+## Course map
+
+Start with `src/00_Start_Here.ipynb`: environment check, the diagram legend, the call tracer, and links to both tracks.
+
+### Track 1: Gang of Four (`src/gof/`)
+
+| # | Notebook | Patterns |
+|---|----------|----------|
+| 1 | `01_Creational` | Singleton, Factory Method, Abstract Factory, Builder, Prototype |
+| 2 | `02_Structural_Part_1` | Adapter, Bridge, Composite, Decorator |
+| 3 | `03_Structural_Part_2` | Facade, Flyweight, Proxy |
+| 4 | `04_Behavioral_Part_1` | Chain of Responsibility, Command, Iterator, Mediator |
+| 5 | `05_Behavioral_Part_2` | Observer, State, Strategy, Memento |
+| 6 | `06_Behavioral_Part_3` | Template Method, Visitor, Interpreter |
+| 7 | `07_Patterns_in_Python` | What the language gives you for free, anti-patterns, a four-pattern capstone |
+
+### Track 2: Architecture (`src/architecture/`)
+
+| # | Notebook | What you learn |
+|---|----------|----------------|
+| 1 | `01_Monolith_and_Modular_Monolith` | One deployable, the big ball of mud, enforced module boundaries, blast radius |
+| 2 | `02_Layered_Hexagonal_and_MVC` | Dependency direction, ports and adapters, testing the core without a database, MVC |
+| 3 | `03_Microservices` | Data ownership, availability arithmetic, latency simulator, timeouts, retries, circuit breakers |
+| 4 | `04_Event_Driven_and_CQRS` | Publish/subscribe, eventual consistency, CQRS read models, sagas |
+| 5 | `05_Choosing_an_Architecture` | Trade-off table, the migration path, strangler fig, Conway's law |
+
+Each module has learning objectives, one section per pattern (problem, structure, code, trace, when to use it),
+an interactive lab, exercises with hidden solutions, a checkpoint quiz and key takeaways.
+
+## The helper package and the labs
+
+`src/dplab/` is installed into the project's environment by `uv sync`, so it imports from either track folder.
+
+| Helper | What it does |
+|--------|--------------|
+| `class_diagram`, `sequence_diagram`, `state_diagram`, `tree_diagram`, `component_diagram` | Diagram drawers with a minimal notation |
+| `@traced` and `with trace() as t:` | Record the method calls made inside the block and draw them with `t.diagram()` |
+| `check_dependencies` | A few-line module boundary checker for the modular monolith |
+| `quiz(key)` | Checkpoint quizzes, `1` to `7` and `'arch1'` to `'arch5'` |
+
+| Lab | Used in |
+|-----|---------|
+| Pattern Picker | Start Here, GoF 7 |
+| Builder Lab | GoF 1 |
+| Decorator Lab | GoF 2 |
+| Flyweight Lab | GoF 3 |
+| Chain of Responsibility Lab, Command Lab | GoF 4 |
+| Observer Lab, State Machine Lab | GoF 5 |
+| Interpreter Lab | GoF 6 |
+| Latency and Availability Lab | Architecture 3 |
+| Event Lab | Architecture 4 |
+| Architecture Picker | Architecture 5 |
+
+Labs need a running kernel; viewed statically the notebooks show a preview of the initial state instead.
+
+## Setup
+
+Requires Python 3.13 and [uv](https://docs.astral.sh/uv/).
+
+```bash
+uv sync                                                          # creates .venv with matplotlib and ipywidgets, installs dplab
+uv run python -m ipykernel install --user --name design_patterns
+jupyter lab src/                                                 # then pick the design_patterns kernel
+```
+
+## Editing the course
+
+The notebooks are the source of truth: edit them in JupyterLab. If you add or reorder modules, keep the navigation
+links at the top and bottom of each notebook pointing at the right neighbours and at `../00_Start_Here.ipynb`,
+and update the course maps there and in this README.
