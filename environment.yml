@@ -1,0 +1,10 @@
+name: design-patterns
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13
+  - pip
+  - pip:
+      - matplotlib==3.11.1
+      - ipywidgets==8.1.9
+      - ipykernel==7.3.0

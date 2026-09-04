@@ -1,9 +1,17 @@
 # Design Patterns
 
+[![Read online](https://img.shields.io/badge/read%20online-github%20pages-blue)](https://indranandjha1993.github.io/design-patterns/) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/indranandjha1993/design-patterns/main?urlpath=lab/tree/src/00_Start_Here.ipynb)
+
 A hands-on course in two tracks. Track one covers the 23 Gang of Four patterns; track two covers the
 architectures those objects live in: monoliths, modular monoliths, layered and hexagonal designs,
 microservices, and event-driven systems. Every pattern comes as a class diagram, a short Python
 implementation, a sequence diagram traced from the real method calls, and a lab you drive yourself.
+
+## Read or run it
+
+- **Read online:** https://indranandjha1993.github.io/design-patterns/ is the full course as a website, built from these notebooks on every push.
+- **Run online:** the Binder badge above opens the notebooks in a live JupyterLab in your browser, labs included. The first launch after a change takes a few minutes while the image builds; later launches are quick.
+- **Run locally:** see Setup below.
 
 ## Course map
 

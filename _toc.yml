@@ -1,0 +1,19 @@
+format: jb-book
+root: src/00_Start_Here
+parts:
+- caption: Gang of Four
+  chapters:
+  - file: src/gof/01_Creational
+  - file: src/gof/02_Structural_Part_1
+  - file: src/gof/03_Structural_Part_2
+  - file: src/gof/04_Behavioral_Part_1
+  - file: src/gof/05_Behavioral_Part_2
+  - file: src/gof/06_Behavioral_Part_3
+  - file: src/gof/07_Patterns_in_Python
+- caption: Architecture
+  chapters:
+  - file: src/architecture/01_Monolith_and_Modular_Monolith
+  - file: src/architecture/02_Layered_Hexagonal_and_MVC
+  - file: src/architecture/03_Microservices
+  - file: src/architecture/04_Event_Driven_and_CQRS
+  - file: src/architecture/05_Choosing_an_Architecture

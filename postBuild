@@ -1,0 +1,4 @@
+#!/bin/bash
+set -euo pipefail
+pip install -e .
+python -m ipykernel install --user --name design_patterns --display-name design_patterns
