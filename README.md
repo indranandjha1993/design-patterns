@@ -75,3 +75,14 @@ jupyter lab src/                                                 # then pick the
 The notebooks are the source of truth: edit them in JupyterLab. If you add or reorder modules, keep the navigation
 links at the top and bottom of each notebook pointing at the right neighbours and at `../00_Start_Here.ipynb`,
 and update the course maps there and in this README.
+
+## Related courses
+
+This is one of three hands-on notebook courses built in the same format:
+
+- [Quantum Computing with Code](https://github.com/indranandjha1993/quantum-computing): qubits to Grover and noise, with Qiskit
+- [Data Structures and Algorithms](https://github.com/indranandjha1993/data-structures-algorithms): Big-O to dynamic programming, every claim measured
+
+## License
+
+MIT. Use it, fork it, teach with it.
