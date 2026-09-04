@@ -1,0 +1,25 @@
+[project]
+name = "design-patterns"
+version = "0.1.0"
+description = "Hands-on learning notebooks for software design patterns: Python implementations, class and sequence diagrams, and interactive labs"
+readme = "README.md"
+authors = [
+    { name = "Indra Nand Jha", email = "indranandjha0@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "ipywidgets>=8.1.9",
+    "matplotlib>=3.11.1",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "dplab"
